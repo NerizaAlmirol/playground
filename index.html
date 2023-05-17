@@ -7,5 +7,24 @@
     <link rel="stylesheet" src="/css/main.css" />
     <title>Everyhting I learned from the Internet</title>
   </head>
-  <body></body>
+  <body>
+    <div class="paddingBlock">
+      <h1>EQUAL HEIGHT + WIDTH COLUMNS WITH MARGINS</h1>
+      <p>
+        Add display:flex, justify-content: space-between; to the parent and give
+        a width to the boxes that totals to less than 100%. E.g. These boxes
+        have a width of 32% each. The remaining width of 4% (i.e. 32 x 3 = 96%)
+        will be used to create the space between the boxes and simulate margins.
+        No need to remove margins on the first and last child!
+      </p>
+      <div class="equalHMWrap eqWrap">
+        <div class="equalHM eq">
+          boo <br />
+          boo
+        </div>
+        <div class="equalHM eq">fzslgkvosk eofkd ks eafk akedk daesikd</div>
+        <div class="equalHM eq">clue</div>
+      </div>
+    </div>
+  </body>
 </html>
