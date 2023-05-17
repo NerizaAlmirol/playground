@@ -8,23 +8,42 @@
     <title>Everyhting I learned from the Internet</title>
   </head>
   <body>
-    <div class="paddingBlock">
-      <h1>EQUAL HEIGHT + WIDTH COLUMNS WITH MARGINS</h1>
-      <p>
-        Add display:flex, justify-content: space-between; to the parent and give
-        a width to the boxes that totals to less than 100%. E.g. These boxes
-        have a width of 32% each. The remaining width of 4% (i.e. 32 x 3 = 96%)
-        will be used to create the space between the boxes and simulate margins.
-        No need to remove margins on the first and last child!
-      </p>
-      <div class="equalHMWrap eqWrap">
-        <div class="equalHM eq">
-          boo <br />
-          boo
+    <section>
+      <h1>Same Column Height</h1>
+      <div class="flex">
+        <div class="col">
+          <a href="#">
+            <img src="image.jpg" width="" height="" alt="Some sample words" />
+          </a>
+
+          <h2>A little title</h2>
+          <p>Lorem ipsum dolor sit […]</p>
+
+          <a class="btn" href="#">Read more</a>
         </div>
-        <div class="equalHM eq">fzslgkvosk eofkd ks eafk akedk daesikd</div>
-        <div class="equalHM eq">clue</div>
+
+        <div class="col">
+          <a href="#">
+            <img src="image.jpg" width="" height="" alt="Some sample words" />
+          </a>
+
+          <h2>A little title</h2>
+          <p>Lorem ipsum dolor sit amet […]</p>
+
+          <a class="btn" href="#">Read more</a>
+        </div>
+
+        <div class="col">
+          <a href="#">
+            <img src="image.jpg" width="" height="" alt="Some sample words" />
+          </a>
+
+          <h2>A little title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur […]</p>
+
+          <a class="btn" href="#">Read more</a>
+        </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>
