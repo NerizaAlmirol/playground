@@ -78,3 +78,58 @@ button{
   transform: translate(-50%,-50%);
   position: absolute;
 }
+
+
+.third {
+	border: 0;
+	cursor: pointer;
+	background: none;
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+	position: relative;
+	outline: none;
+	padding: 18px 40px;
+	box-sizing: border-box;
+  }
+  
+  .third::before, button::after {
+	box-sizing: inherit;
+	position: absolute;
+	content: '';
+	border: 2px solid transparent;
+	width: 0;
+	height: 0;
+  }
+  
+  .third::after {
+	bottom: 0;
+	right: 0;
+  }
+  
+  .third::before {
+	top: 0;
+	left: 0;
+  }
+  
+  .third:hover::before, .third:hover::after {
+	width: 100%;
+	height: 100%;
+  }
+  
+  .third:hover::before {
+	border-top-color: crimson;
+	border-right-color: crimson;
+	transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+  }
+  
+  .third:hover::after {
+	border-bottom-color: crimson;
+	border-left-color: crimson;
+	transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s, height 0.3s ease-out 1s;
+  }
+
+  .fourth:hover{
+    background: crimson;
+    box-shadow: 0 0 28px 10px crimson;
+}
