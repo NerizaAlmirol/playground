@@ -13,7 +13,7 @@ body{
 
 /*buttons */
 
-.first{
+button{
     padding: 18px 45px;
     margin: 0 10px;
     cursor: pointer;
@@ -51,4 +51,30 @@ body{
   transform: translate(-50%,-50%);
   position: absolute;
   width: 100%;
+}
+
+.second::before{
+    content: '';
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+    transition: .3s linear all;
+}
+.second:hover::before{
+    height: 100%;
+}
+.second:hover::after{
+  content: 'Hover';
+  color: white;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
 }
