@@ -133,3 +133,43 @@ button{
     background: crimson;
     box-shadow: 0 0 28px 10px crimson;
 }
+
+
+.fifth {
+	border: 2px solid white;
+	background: transparent;
+	text-transform: uppercase;
+	color: white;
+	padding: 18px 50px;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	transition: .3s ease;
+	cursor: pointer;
+  }
+  .fifth:hover{
+	  background: crimson;
+  }
+  
+  .fifth span {
+	z-index: 20;  
+  }
+  
+  .fifth:after {
+	content: '';
+	  display: block;
+	  position: absolute;
+	  top: -36px;
+	  left: -100px;
+	  background: white;
+	  width: 50px;
+	  height: 125px;
+	  opacity: 25%;
+	  transform: rotate(-45deg);
+  }
+  
+  .fifth:hover:after {
+	left: 120%;
+	transition: all .8s cubic-bezier(0.3, 1, 0.2, 1);
+	 -webkit-transition: all .8s cubic-bezier(0.3, 1, 0.2, 1);
+  }
