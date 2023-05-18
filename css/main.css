@@ -1,59 +1,54 @@
-/**
- * Make images responsive
- */
- .flex .col img {
-	width: 100%;
-	height: auto;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(34, 34, 34);
 }
 
-/**
- * Make .flex children same
- * height using display flex.
- * Justify property prepares
- * cols for being centered.
- */
-.flex {
-	display: flex;
-	justify-content: center;
-	width: 960px;
-	max-width: 100%;
-	margin: auto;
-}
+/*buttons */
 
-/**
- * Make cols flexible to
- * auto push button at the
- * col bottom.
- */
-.flex .col {
-	display: flex;
-	flex-direction: column;
-	flex: 1 1 300px;
-	/* 
-	In the order, equal to
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: 300px;
-	*/
-	margin: 1em;
+button{
+    padding: 18px 45px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid white;
+    background: transparent;
+    color: blanchedalmond;
+    position: relative;
+    transition: .4s ease;
 }
-
-/**
- * Margin-top auto pushes
- * button to bottom.
- * Align self makes button
- * stuck to the left.
- */
-.flex .col .btn {
-	align-self: flex-start;
-	margin-top: auto;
+button::before{
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+    transition: .3s linear all;
 }
-
-/**
- * Under 900px wrap cols
- */
-@media (max-width: 900px) {
-	.flex {
-		flex-wrap: wrap;
-	}
+button:hover::before{
+    width: 100%;
+}
+button:hover::after{
+  content: 'Hover';
+  color: white;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width: 100%;
 }
